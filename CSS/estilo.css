@@ -1166,7 +1166,7 @@ textarea:valid {
     /* HEADER */
     .redes,
     .entrar,
-    .inputBusca {
+    #inputBusca {
         display: none;
     }
 
