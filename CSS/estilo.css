@@ -1486,6 +1486,14 @@ textarea:valid {
         font-size: 4.5vw;
     }
 
+    .textoOrcamento p {
+        font-size: 15px;
+    }
+
+    .opcoesOrcamento {
+        font-size: 12px;
+    }
+	
     .linkPresentes a {
         font-size: 4.5vw;
     }
