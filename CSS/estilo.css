@@ -980,8 +980,6 @@ textarea:valid {
         height: 58vh;
     } 
 
-
-    
     #paragrafo {
         padding: 50px 80px;
     }
@@ -1170,6 +1168,10 @@ textarea:valid {
         display: none;
     }
 
+    .topoPrincipal span {
+	display: none;
+    }
+	
     /* INDEX */
 
     .container-slide{
