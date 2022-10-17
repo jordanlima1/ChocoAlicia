@@ -42,7 +42,7 @@ Os próximos passos serão desenvolver um sistema de loja virtual, com acesso de
 
 O site conta com uma página exclusiva para apresentar a equipe que desenvolveu este projeto.
 
-- <a href="https://www.linkedin.com/in/acardioli/">*Amanda Cardoso*</a><br> 
+- <abbr title="Linkedin"><a href="https://www.linkedin.com/in/acardioli/">*Amanda Cardoso*</a></abbr><br> 
 - <a href="https://www.linkedin.com/in/jordan-lima-03787a248/">*Jordan Lima*</a><br>
 - <a href="https://www.linkedin.com/in/julianajesus93/">*Juliana Jesus*</a><br>
 - <a href="https://www.linkedin.com/in/luan-carlos-8395051ba/">*Luan Carlos*</a><br>
