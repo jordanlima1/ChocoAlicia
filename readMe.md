@@ -8,6 +8,8 @@ Projeto desenvolvido em grupo para a disciplina de Front-end do curso de WebDev 
 
 Conteúdo fictício. Em desenvolvimento.
 
+Acesse o site: https://jordanlima1.github.io/ChocoAlicia/
+
 ## **Detalhamento do projeto**
 
 ChocoAlícia produz chocolates artesanais desde 1993, mas foi a partir de 2004 que ela começou a vender suas delícias como venda direta para um público mais amplo, fazendo chocolates para festas e eventos. Em 2014, ela resolveu dar um passo na expansão do seu negócio, e abriu sua loja no Shopping Bangu, onde seus clientes encontram opções pronta-entrega para consumo próprio e presentes.
