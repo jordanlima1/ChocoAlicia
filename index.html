@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoAlícia</title>
+    <link rel="icon" type="image/x-icon" href="./imagens/icons/favChoco.png">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+</head>
+
+<body>
+    <header> <!--Logo da loja, redes sociais, barra de busca, botão entrar-->
+        <div class="topo">
+
+            <div class="redes"> <!--redes sociais-->
+                <img src="./imagens/icons/wpp.png">
+                <img src="./imagens/icons/insta.png">
+                <img src="./imagens/icons/fb.png">
+            </div>
+
+            <div class="topoPrincipal"> <!--logo e busca-->
+                <a href="index.html"><img src="./imagens/logo_chocoalicia_comFundo.png"></a><br>
+                <input type="text" placeholder="O que você procura..." id="inputBusca"><span><ion-icon name="search-outline"></ion-icon></span>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+
+            <div class="entrar"> <!--entrar-->
+                <div class="botaoEntrar">
+                    <button id="abrePopup">Entrar</button> 
+                </div>
+            </div>
+
+            <div class="popup"><!--Popup para o botão Entrar-->
+                <div class="close-btn">&times;</div>
+                <div class="popupForm">
+                    <h2>Acesse sua conta</h2>
+                    <div class="form-element">
+                        <label for="email-popup">Email</label>
+                        <input type="text" id="email-popup" placeholder="Digite seu email" required>
+                    </div>    
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password1" placeholder="Digite sua senha" required minlength="3">
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" id="lembrar-me">
+                        <label for="lembrar-me">Lembrar-me</label>
+                    </div>
+                    <div class="form-element">
+                        <button id="btn-popup">Entrar</button>
+                    </div>
+                    <div class="form-element">
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                </div>
+            </div><!--fim popup-->
+
+        </div> <!--fim topo-->
+
+    </header>
+
+    <!--Barra de navegação-->
+    <div class="nav">
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+                <li><a href="NossoTime.html">NOSSO TIME</a></li>
+                <li><a href="Presentes.html">PRESENTES</a></li>
+                <li><a href="Contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </div> <!--fim nav-->
+   
+
+    <div id="index"> <!--Div para todo o conteúdo da página-->
+        
+        <div class="container-slide">
+            <div class="açao-button" id="previsao">&laquo</div>
+            <div class="container-itens" id="container-itens"></div>
+            <div class="açao-button" id="next">&raquo</div>
+        </div> <!--container-slide-->
+            
+        <div id="paragrafo">
+            <p class="slogan">A chocolateria líder de vendas para festas e eventos na cidade do Rio de Janeiro.</p>
+            <p class="destaqueSlogan">Especialistas em proporcionar momentos únicos e criar boas memórias através do sabor.</p>
+        </div>
+
+        <div class="orcamento">
+            <div class="orcamento-imagens">
+                <img src="./imagens/orcamento-index/000.jpg">
+                <img src="./imagens/orcamento-index/0000.jpg">
+                <img src="./imagens/orcamento-index/00000.jpg">
+            </div>
+
+            <div class="textoOrcamento">
+                <h1>Leve ChocoAlícia ao seu evento</h1>
+                <p>Nossa chocolateria conta com os mais diversos itens para compor sua mesa de chocolates 
+                    e encantar seus convidados.
+                </p>
+                <p>Realizamos eventos corporativos, aniversários e cerimoniais. São mais de cinquenta tipos 
+                    de bombons com diferentes sabores e apresentações para sua ornamentação.
+                </p>
+                <p>Em nosso espaço no Shopping Bangu você poderá experimentar nosso menu degustação e selecionar 
+                    os produtos que serão servidos em seu evento.
+                </p>
+                <br>
+                <p>Veja algumas opções do nosso cardápio:</p>
+
+                <div class="opcoesOrcamento">
+                    <ul>
+                        <li>Copinho de avelã </li> 
+                        <li>Copinho de brigadeiro</li> 
+                        <li>Copinho de beijinho</li>
+                        <li>Copinho de amora</li>
+                        <li>Camafeu de nozes</li>
+                        <li>Língua de gato ao leite</li>
+                        <li>Colher de chocolate</li>
+                        <li>Docinhos no palito</li>
+                    </ul>
+                    <ul>
+                        <li>Mini trufas frutadas</li> 
+                        <li>Mini brownie</li> 
+                        <li>Bombons de mousse de chocolate</li>
+                        <li>Bombons de licor cereja</li>
+                        <li>Bombons de uva</li>
+                        <li>Bombons de pimenta rosa</li>
+                        <li>Mediants de damasco
+                        <li><b>E muito mais...</b></li>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="destaque">Entre em contato conosco e agende sua visita!</p>
+                
+            </div><!--fim textoOrcamento-->
+        </div><!--fim orcamento-->
+
+        <div class="linkPresentes">
+            <h1><a href="Presentes.html">Para presentear</a></h1>
+            <div class="fotosPresentes">
+                <img src="./imagens/presentes-index/florescer1.jpg">
+                <img src="./imagens/presentes-index/batecoracao1.jpg">
+                <img src="./imagens/presentes-index/florescer2.jpg">
+                <img src="./imagens/presentes-index/meuamor1.jpg">
+            </div>
+        </div><!--fim linkPresentes-->
+        
+
+    </div> <!--fim Index-->
+
+
+    <footer>
+
+        <div class="logoRodape">
+            <a href="index.html"><img src="./imagens/logo_chocoalicia_comFundo.png"></a>
+        </div>
+
+        <div class="rodape">
+            <div class="textoRodape">
+                <div class="redesRodape">
+                    <h4>Fale conosco</h4>
+                    <div class="iconesRedes">
+                        <img src="./imagens/icons/wpp.png">
+                        <img src="./imagens/icons/insta.png">
+                        <img src="./imagens/icons/fb.png">
+                    </div>
+                </div>
+
+                <div class="funcionamento">
+                    <h4>Horário de funcionamento</h4>
+                    <p> Segunda a sábado: <span>10h às 22h</span><br>
+                        Domingo e feriado: <span>13h às 21h</span></p>
+                </div>
+                    
+                <div id="localizacao">
+                    <h4>Localização</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.9396196271614!2d-43.46877558503476!3d-22.878688785026135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdff2a1bed6f3%3A0x5ecb9488f615e5a2!2sBangu%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1666017113047!5m2!1spt-BR!2sbr" width="200" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div> <!--fim textoRodape-->
+
+            <div class="copyright">
+                <p>ChocoAlícia © Copyright 2022 - Todos os direitos reservados. CNPJ 00.000.000/0001-00.</p>
+                <p>Desenvolvido por <a href="devs.html">Impulse Company</a></p>
+            </div>
+        </div> <!--fim rodape-->
+
+    </footer>
+
+    <!-- SCRIPTS EXTERNOS -->
+    <script src="javascript/popup-login.js"></script>
+    <script src="javascript/carrossel.js"></script>
+</body>
+</html>

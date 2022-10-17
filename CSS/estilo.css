@@ -1,0 +1,1569 @@
+/* PALETA DE CORES
+    caramelo rgb(217, 130, 54), 
+    rosinha rgb(242, 185, 136), 
+    offwhite rgb(242, 231, 220), 
+    marrom rgb(89, 23, 8), 
+    preto rgb(13, 13, 13) 
+*/
+
+/* FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* códigos base */
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(242, 231, 220);
+    color: rgb(13, 13, 13);
+}
+
+.chocoalicia { /*usado em span quando aparece o nome da loja*/
+    font-family: 'Noto Serif';
+    font-size: large;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(89, 23, 8);
+}
+
+
+/* HEADER */
+.topo {
+    background-image: radial-gradient(circle, rgb(242, 231, 220) 3%, rgb(242 185 136) 55%);
+    width: auto;
+    display: grid;  
+    grid-template-columns: auto auto auto;
+}
+
+.topoPrincipal {
+    text-align: center;
+    margin: 20px 0 30px 0;
+    display: block;
+    grid-column-start: 2;
+}
+
+.topoPrincipal img {
+    height: 170px;
+    width: auto;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+#inputBusca {
+    padding: 10px 15px;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border: solid 2px rgb(217, 130, 54);
+    box-sizing: border-box;
+}
+
+.topoPrincipal span{
+    margin-left:-20px;
+}
+
+.redes {
+    grid-column-start: 1;
+    align-items: end;
+    justify-content: end;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.redes img {
+    width: 40px;
+    height: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.redes img:hover {
+    opacity: 100%;
+}
+
+.entrar {
+    grid-column-start: 3;
+    align-items: end;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.botaoEntrar {
+    cursor: pointer;
+    padding: 8px 12px;
+    background-color: rgb(217, 130, 54);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(13, 13, 13, 0.500);
+}
+
+#abrePopup {
+    cursor:pointer; 
+    background: none; 
+    border: none;
+    color: rgb(242, 231, 220);
+    font-family: 'Noto Serif';
+    font-weight: bold;
+}
+
+#abrePopup:hover {
+    color: rgb(89, 23, 8)
+}
+
+/* popup */
+.popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    background: rgb(242, 185, 136);
+    padding: 20px 30px;
+    box-shadow: 3px 3px 5px 4px rgba(13, 13, 13, 0.8);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms, 
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+                z-index: 1000;
+}
+
+.popup.active {
+    top: 64%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    background: rgb(89, 23, 8);
+    color: rgb(242, 231, 220);
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popupForm h2 {
+    text-align: center;
+    color: rgb(89, 23, 8);
+    margin: 18px 0px 28px;
+    font-size: 25px;
+}
+
+.form-element {
+    margin: 15px 0px;
+}
+
+.popup .popupForm .form-element label {
+    font-size: 14px;
+    color: rgb(89, 23, 8);
+}
+
+.popup .popupForm .form-element input[type=text],
+.popup .popupForm .form-element input[type=password] {
+    background-color: rgb(242, 231, 220);
+    margin-top: 5px; 
+    display: block;
+    width: 95%;
+    height: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.popup .popupForm .form-element input[type=checkbox] {
+    margin-right: 5px;
+}
+
+.popup .popupForm .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: rgb(217, 130, 54);
+    color: rgb(242, 231, 220);
+    border-radius:10px ;
+    cursor: pointer;
+}
+
+.popup .popupForm .form-element a{
+    display:block ;
+    text-align: right;
+    font-size: 15px;
+    color:#1a79ca;
+    text-decoration: none;
+    font-weight: 500;
+}
+/*fim popup*/
+/*fim Header*/
+
+
+/* MENU */
+.nav{
+    background-color: rgb(89, 23, 8);
+    box-shadow: 4px 4px 10px rgba(13, 13, 13, 0.5);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    margin-bottom: 30px;
+    z-index: 3;
+}
+
+.nav-bar{
+    padding: 10px 0;
+}
+
+.nav-bar ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: rgb(242, 231, 220);
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.nav-bar ul li a:hover{
+    color: rgb(217, 130, 54);
+}
+/*fim menu*/
+
+
+/* RODAPÉ */
+footer {
+    background-color: rgb(89, 23, 8);
+    padding: 30px 20px 20px 20px;
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.logoRodape {
+    margin: 0 30px;
+}
+
+.logoRodape img {
+    height: 130px;
+    transition: 0.5s;
+}
+
+.rodape {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.rodape h4 {
+    font-family: 'Noto Serif';
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(242, 231, 220)
+}
+
+.textoRodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.redesRodape {
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.iconesRedes img {
+    width: 40px;
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.iconesRedes img:hover {
+    opacity: 100%;
+}
+
+.funcionamento {
+    color: rgb(242, 231, 220);
+    padding: 0 10px;
+}
+
+.funcionamento p {
+    color: rgb(217, 130, 54);
+}
+
+.funcionamento span {
+    color: rgb(242, 185, 136);
+}
+
+#localizacao {
+    padding: 0 10px;
+}
+
+.copyright {
+    color: rgb(217, 130, 54);
+    text-align: left;
+    font-size: 12px;
+    padding: 0 10px 5px 10px;
+    line-height: 1.6;
+    margin-top: -20px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: rgb(242, 185, 136);
+}
+
+.copyright a:hover {
+    color: rgb(217, 130, 54);
+}
+/*fim rodapé*/
+/*fim códigos base*/
+
+
+
+
+
+/* INÍCIO DAS PÁGINAS INDIVIDUAIS*/
+
+/* INDEX */
+#index{
+    display: block;
+}
+
+#paragrafo{
+    justify-content: center;
+    text-align: center;
+    padding: 90px 0;
+    padding: 50px 150px;
+    animation-name: scale;
+    animation-duration: 4s;
+} 
+
+.slogan {
+    font-family: 'Noto Serif';
+    font-size: 40px;  
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+
+.destaqueSlogan {
+    color: rgb(217, 130, 54);
+    /*font-weight: bold;*/
+    font-size: 35px;
+    font-family: 'Noto Serif';
+    margin-top: 30px;
+}
+
+
+
+
+
+/* carrossel, slide */
+.container-slide{
+	display: flex;
+	justify-content: space-between;
+	width: 85vw;
+	height: 60vh;
+	background-color: black;
+	margin: 1vh 100px;
+	border-radius: 5px;
+	box-shadow: 0 20px 30px #00000088;
+}
+
+.container-itens{
+	position: absolute;
+	display: flex;
+	width: 85vw;
+	height: 60vh;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.item{
+	width: 85vw;
+	height: 60vh;
+	transition: all 1s;
+}
+
+.item img{
+	width: 85vw;
+	height: 60vh;
+	border-radius: 5px;
+}
+
+.açao-button {
+	font: bold 30px sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	color: rgb(242, 231, 220);
+	user-select: none;
+	z-index: 1;
+}
+
+.açao-button:hover{
+	color: rgb(242, 231, 220);
+	background-color: #0f0d0a88;
+	cursor: pointer;
+	transition: all 1s;
+}
+/*fim carrossel/slide*/
+
+.orcamento {
+    display: flex;
+    background-image: linear-gradient(150deg, rgb(242 185 136), rgb(242, 231, 220));
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 30px 50px;
+    border-radius: 30px 0 0 30px;
+    padding: 40px 47px;
+}
+
+.orcamento-imagens {
+    display: block;
+    text-align: center;
+}
+
+.orcamento-imagens img {
+    width: 250px;
+    margin: 10px 0;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0 rgba(13, 13, 13, 0.3);
+}
+
+.textoOrcamento {
+    padding-left: 50px;
+}
+
+.textoOrcamento h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-family: 'Noto Serif';
+    color: rgb(89, 23, 8);
+    animation-name: deslizar;
+    animation-duration: 4s;
+}
+
+.textoOrcamento p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.textoOrcamento ul li {
+    list-style-type: none;
+    color: rgb(89, 23, 8)
+    
+}
+.opcoesOrcamento {
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-evenly;
+}
+
+.destaque {
+    color: rgb(217, 130, 54);
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Noto Serif';
+    margin-top: 30px;
+}
+
+.linkPresentes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.linkPresentes h1 {
+    margin-bottom: 10px;
+}
+
+.linkPresentes a {
+    font-size: 35px;
+    font-family: 'Noto Serif';
+    color: rgb(89, 23, 8);
+    text-decoration: none;
+}
+
+.fotosPresentes {
+    background-image: linear-gradient(150deg, rgb(242 185 136), rgb(242, 231, 220));
+    box-shadow: 4px 4px 10px 0 rgba(13, 13, 13, 0.3);
+    margin: 0 50px;
+    border-radius: 30px;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.fotosPresentes img {
+    width: 20%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0 rgba(13, 13, 13, 0.3);
+}
+/*fim index*/
+
+
+/* QUEM SOMOS */
+.containerLeft {
+    display: flex;
+    background-image: linear-gradient(150deg, rgb(242 185 136), rgb(242, 231, 220));
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 30px 50px;
+    border-radius: 30px 0 0 30px;
+    padding: 40px 47px;
+}
+
+.containerRight {
+    display: flex;
+    background-image: linear-gradient(230deg, rgb(242 185 136), rgb(242, 231, 220));
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px 30px 0 ;
+    border-radius: 0 30px 30px 0;
+    padding: 40px 47px;
+}
+
+#quemSomos img {
+    width: 400px;
+    border-radius: 30px;
+    border: 10px;
+    box-shadow: 2px 2px 10px 0 rgba(13, 13, 13, 0.5);
+    transition: 0.5s;
+    animation-name: transparencia;
+    animation-duration: 5s;
+}
+
+#quemSomos img:hover {
+    scale: 1.05;
+}
+
+#quemSomos h2 {
+    font-size: 30px;
+    font-family: 'Noto Serif';
+    color:rgb(89, 23, 8);
+    margin-bottom: 20px;
+    animation-name: deslizar;
+    animation-duration: 4s;
+}
+
+#quemSomos p {
+    font-size: 25px;
+}
+
+.textoQuemSomos {
+    margin: 0 70px;
+}
+/*fim Quem Somos*/
+
+
+/* NOSSO TIME */
+#nossoTime { 
+    text-align: center;
+}
+
+#nossoTime h1 {
+    font-size: 35px;
+    margin: 15px;
+    font-family: 'Noto Serif';
+    color: rgb(89, 23, 8);
+}
+
+.containerFuncionarios {
+    background-image: linear-gradient(150deg, rgb(242 185 136), rgb(242, 231, 220));
+    box-shadow: 4px 4px 10px 0 rgba(13, 13, 13, 0.3);
+    margin: 30px 50px;
+    border-radius: 30px;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.funcionario {
+    padding: 10px;
+    text-align: center;
+    width: 25%;
+}
+
+.funcionario img {
+    border-radius: 50%;
+    margin: 10px;
+    display: inline;
+    width: 150px;
+    box-shadow: 2px 2px 8px 0 rgba(13, 13, 13, 0.3);
+}
+
+.funcionario h3 {
+    color: rgb(89, 23, 8);
+    font-family: 'Noto Serif';
+    font-size: 22px;
+}
+
+.cargo {
+    color: rgb(89, 23, 8);
+    font-weight: bold;
+}
+/*fim Nosso Time*/
+
+
+/* PRESENTES */
+#presentes {
+    text-align: center;
+}
+
+#presentes h1 {
+    font-size: 35px;
+    font-family: 'Noto Serif';
+    color: rgb(89, 23, 8);
+    margin: 15px;
+}
+
+.presentesDescricao {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 80px;
+}
+
+.linhasComerciais {
+    background-image: linear-gradient(150deg, rgb(242 185 136), rgb(242, 231, 220));
+    margin: 30px 0 30px 50px;
+    border-radius: 30px 0 0 30px;
+    padding: 30px;
+}
+
+.linhasComerciais h2 {
+    font-size: 25px;
+    font-family: 'Noto Serif';
+    font-style: italic;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: rgb(89, 23, 8);
+}
+.linhasComerciais h2:hover {
+    color: rgb(217, 130, 54);
+}
+
+.linhaDescricao {
+    text-align: left;
+    font-size: 20px;
+    color: rgb(89, 23, 8);
+    padding-left: 20px;
+    animation-name: deslizar;
+    animation-duration: 4s;
+}
+
+.btn-presentes{
+    display: flex;
+    border: none;
+    background-color: #f2bd8f00
+}
+
+.btn-presentes:hover{
+    cursor: pointer;
+}
+
+.drop-linha-presentes{
+    list-style-type: none;
+}
+
+.linhaOpcoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.linhaOpcoes img {
+    height: 250px;
+    border: solid 5px rgb(217, 130, 54);
+    box-shadow: 2px 2px 8px rgba(13, 13, 13, 0.5);
+    transition: 0.5s;
+}
+
+.linhaOpcoes img:hover {
+    scale: 1.1;
+    border: solid 5px rgb(242, 231, 220);
+}
+
+.produto {
+    display: inline-flex;
+    align-items: end;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.produtoInfos {
+    display: block;
+    padding: 0 15px;
+}
+
+.produtoInfos h3 {
+    font-family: 'Noto Serif';
+    font-size: 23px;
+    padding-bottom: 10px;
+    text-align: left;
+    color: rgb(89, 23, 8)
+}
+
+.produtoDescricao {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.tamanhoSabor {
+    text-align: left;
+    font-style: italic;
+    color: rgb(89, 23, 8)
+}
+
+.preco {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+.botaoQuero {
+    background-color: rgb(217, 130, 54);
+    box-shadow: 1px 1px 4px 0 rgba(13, 13, 13, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(89, 23, 8);
+    width: fit-content;
+    margin-top: 15px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.botaoQuero:hover {
+    color: rgb(13, 13, 13);
+}
+/*fim Presentes*/
+
+
+/* CONTATO */
+#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+/* formulário */
+form {
+    background-image: linear-gradient(150deg, rgb(242 185 136), rgb(242, 231, 220));
+    box-shadow: 1px 1px 4px 0 rgba(13, 13, 13, 0.5);
+    border-radius: 30px;
+    border: none;
+    font-family: 'Noto Serif';
+    text-align: left;
+    width: auto;
+    margin: 30px ;
+    padding: 20px 60px 20px 40px;
+}
+
+form h2 {
+    color: rgb(89, 23, 8);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.nomeSobrenome {
+    display:flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.nome {
+    margin-right: 30px;
+}
+
+label {
+    font-size: 23px;
+}
+
+input[type=text],
+input[type=email] {
+    background-color: rgb(242, 231, 220);
+    padding: 8px;
+    border: 0;
+    margin-top: 5px;
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+}
+
+textarea {
+    background-color: rgb(242, 231, 220);
+    padding: 8px;
+    border: 0;
+    margin-top: 5px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100px;
+}
+
+input[type=submit] {
+    background-color: rgb(217, 130, 54);
+    box-shadow: 1px 1px 4px 0 rgba(13, 13, 13, 0.5);
+    font-family: 'Noto Serif';
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(89, 23, 8);
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: rgb(242, 231, 220);
+}
+
+input:invalid, 
+textarea:invalid {
+    border: red 1px solid;
+}
+
+input:valid, 
+textarea:valid {
+    border: green 1px solid;
+}
+/*fim formulário*/
+
+.redesSociais {
+    text-align: center;
+    justify-content: space-around;
+}
+
+.redesSociais h2 {
+    font-family: 'Noto Serif';
+    font-size: 20px;
+    color: rgb(89, 23, 8);
+    margin-bottom: 30px;
+}
+
+.canaisContato {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.canaisContato img {
+    width: 80px;
+    margin-right: -15px;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.canaisContato img:hover {
+    scale: 1.08;
+}
+
+.contatoDescricao {
+    background-image: linear-gradient(90deg, rgb(242 185 136), rgb(242, 231, 220));
+    text-align: left;
+    padding: 2px 20px 8px 40px;
+    width: 100%;
+}
+
+.contatoDescricao p {
+    margin-top: 8px;
+}
+
+.contatoDescricao a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(89, 23, 8);
+}
+
+.contatoDescricao a:hover {
+    color: rgb(217, 130, 54);
+}
+/*fim contato*/
+
+
+
+
+
+/* ANIMAÇÕES */
+@keyframes scale {
+    from {
+        scale: 0.95;
+    }
+    
+    to {
+        scale: 1.0;
+    }
+}
+
+@keyframes deslizar {
+    from {
+        margin-left: 2%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes transparencia {
+    from {
+        opacity: 50%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+/*fim animações*/
+
+
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    /* RODAPÉ */
+    .logoRodape {
+        margin: 0 20px 0 0;
+    }
+
+    .logoRodape img {
+        height: 110px;
+    }
+
+    /* INDEX */
+
+
+    .container-slide{
+        width: 82vw;
+        height: 58vh;
+        /* margin: 1vh 90px; */
+    }
+    
+    .container-itens{
+        width: 82vw;
+        height: 58vh;
+    }
+    
+    .item{
+        width: 82vw;
+        height: 58vh;
+    }
+    
+    .item img{
+        width: 82vw;
+        height: 58vh;
+    } 
+
+
+    
+    #paragrafo {
+        padding: 50px 80px;
+    }
+
+    .slogan {
+        font-size: 32px;
+    }
+
+    .destaqueSlogan {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    /* RODAPÉ */
+    .redesRodape,
+    .funcionamento,
+    #localizacao {
+        margin-bottom: 15px;
+    }
+
+    .copyright {
+        margin-top: 10px;
+    }
+
+    /* INDEX */
+
+    .container-slide{
+        width: 83vw;
+        height: 60vh;
+         margin: 1vh 90px; 
+    }
+    
+    .container-itens{
+        width: 83vw;
+        height: 60vh;
+    }
+    
+    .item{
+        width: 83vw;
+        height: 60vh;
+    }
+    
+    .item img{
+        width: 83vw;
+        height: 60vh;
+    } 
+
+
+    .orcamento-imagens img {
+        width: 200px;
+    }
+
+    .textoOrcamento h1 {
+        font-size: 28px;
+    }
+    
+    .textoOrcamento p {
+        font-size: 18px;
+    }
+
+    /* QUEM SOMOS */
+    #quemSomos img {
+        width: 300px;
+    }
+
+    #quemSomos p {
+        font-size: 22px;
+    }
+
+    /* NOSSO TIME */
+    .funcionario {
+        width: 40%;
+    }
+
+    /* PRESENTES */
+    #presentes h1 {
+        font-size: 30px;
+    }
+    
+    .presentesDescricao {
+        font-size: 20px;
+        margin: 0 30px;
+    }
+
+    .linhasComerciais {
+        margin: 30px 20px;
+        border-radius: 30px;
+    }
+    
+    .linhaOpcoes {
+        display: block;
+        margin: 0;
+    }
+    
+    .linhaOpcoes img {
+        height: 220px;
+    }
+
+    .produto {
+        margin-top: 40px;
+        padding: 0;
+    }
+    
+    /* CONTATO */
+    #contato {
+        display: grid;
+    }
+
+    .canaisContato {
+        justify-content: center;
+    }
+    
+    .contatoDescricao {
+        width: 50%;
+    }
+}
+
+@media (max-width: 850px) {
+    /* QUEM SOMOS */
+    .containerLeft,
+    .containerRight {
+        margin: 30px 20px;
+        padding: 25px;
+        border-radius: 30px;
+        display: block;
+        text-align: center;
+    }
+
+    #quemSomos img {
+        margin: 15px 0;
+    }
+
+    .textoQuemSomos {
+        margin: 0 30px 15px 30px;
+    }
+
+    /* INDEX */
+
+    .container-slide{
+        width: 80vw;
+        height: 56vh;
+        margin: 1vh 90px; 
+    }
+    
+    .container-itens{
+        width: 80vw;
+        height: 56vh;
+    }
+    
+    .item{
+        width: 80vw;
+        height: 56vh;
+    }
+    
+    .item img{
+        width: 80vw;
+        height: 56vh;
+    } 
+
+
+    .orcamento {
+        margin: 30px 20px;
+        padding: 25px;
+        border-radius: 30px;
+        display: block;
+        text-align: left;
+    }
+    
+    .orcamento-imagens img {
+        margin: 15px 5px;
+        width: 30%;
+    }
+
+    .textoOrcamento {
+        padding-left: 15px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    /* HEADER */
+    .redes,
+    .entrar {
+        display: none;
+    }
+
+    /* INDEX */
+
+    .container-slide{
+        width: 78vw;
+        height: 54vh;
+    }
+    
+    .container-itens{
+        width: 78vw;
+        height: 54vh;
+    }
+    
+    .item{
+        width: 78vw;
+        height: 54vh;
+    }
+    
+    .item img{
+        width: 78vw;
+        height: 54vh;
+    } 
+    .linkPresentes a {
+        font-size: 28px;
+    }
+
+    #paragrafo {
+        padding: 50px 40px;
+    }
+
+    .slogan {
+        font-size: 28px;
+    }
+
+    .destaqueSlogan {
+        font-size: 25px;
+    }
+    
+    /* QUEM SOMOS */
+    #quemSomos img {
+        width: 250px;
+    }
+
+    /* NOSSO TIME */
+    .containerFuncionarios {
+        background-image: linear-gradient(100deg, rgb(242 185 136), rgb(242, 231, 220));
+    }
+
+    /* PRESENTES */
+    #presentes h1 {
+        font-size: 25px;
+    }
+    
+    .presentesDescricao {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 650px) {
+    /* RODAPÉ */
+    .logoRodape img {
+        display: none;
+    }
+    
+    /* INDEX */
+
+    .container-slide{
+        width: 76vw;
+        height: 52vh;
+         margin: 1vh 70px; 
+    }
+    
+    .container-itens{
+        width: 76vw;
+        height: 52vh;
+    }
+    
+    .item{
+        width: 76vw;
+        height: 52vh;
+    }
+    
+    .item img{
+        width: 76vw;
+        height: 52vh;
+    } 
+    
+
+    #paragrafo {
+        padding: 50px 40px 10px 40px;
+    }
+
+    /* QUEM SOMOS */ 
+    #quemSomos img {
+        width: 220px;
+    }
+    
+    #quemSomos p {
+        font-size: 19px;
+    }
+
+    .textoQuemSomos {
+        margin: 0 15px 15px 15px;
+    }
+    
+    /* PRESENTES */
+    .linhaOpcoes img {
+        height: 190px;
+    }
+
+}
+
+@media (max-width: 580px) {
+    /* MENU */
+    .nav-bar ul {
+        justify-content: space-around;
+    }
+    
+    .nav-bar ul li a {
+        font-size: 3vw;
+    }
+
+    /* RODAPÉ */
+    footer {
+        display: block;
+    }
+
+    /* INDEX */
+
+    .container-slide{
+        width: 80vw;
+        height: 50vh;
+         margin: 1vh 70px; 
+    }
+    
+    .container-itens{
+        width: 80vw;
+        height: 50vh;
+    }
+    
+    .item{
+        width: 80vw;
+        height: 50vh;
+    }
+    
+    .item img{
+        width: 80vw;
+        height: 50vh;
+    } 
+
+    .fotosPresentes {
+        padding: 15px 0;
+    }
+
+    .fotosPresentes img {
+        width: 40%;
+        margin: 5px 0;
+    }
+
+    /* NOSSO TIME */
+    #nossoTime h1 {
+        font-size: 28px;
+    }
+    
+    .containerFuncionarios {
+        margin: 30px;
+    }
+    
+    .funcionario {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* PRESENTES */
+    .linhaOpcoes img {
+        height: 160px;
+    }
+
+    .produto {
+        align-items: center;
+    }
+    
+    /* CONTATO */
+    form {
+        margin: 30px 0;
+        padding: 20px;
+    }
+
+    .nomeSobrenome {
+        display: grid;
+        margin-bottom: 0;
+    }
+
+    .nome, 
+    .sobrenome {
+        margin-bottom: 20px;
+    }
+
+    .redesSociais {
+        margin-top: 30px;
+    }
+
+    input[type=text],
+    input[type=email] {
+        height: 25px;
+        width: 280px;
+    }
+
+    textarea {
+        height: 70px;
+        width: 280px;
+    }
+
+    .canaisContato img {
+        width: 90px;
+    }
+
+    .contatoDescricao {
+        padding-left: 30px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    /* INDEX */
+
+    .container-slide{
+        width: 80vw;
+        height: 45vh;
+         margin: 1vh 60px; 
+    }
+    
+    .container-itens{
+        width: 80vw;
+        height: 45vh;
+    }
+    
+    .item{
+        width: 80vw;
+        height: 45vh;
+    }
+    
+    .item img{
+        width: 80vw;
+        height: 45vh;
+    } 
+
+
+    #paragrafo {
+        padding: 30px 20px 10px 20px;
+    }
+
+    .slogan {
+        font-size: 4vw;
+        line-height: 25px;
+    }
+
+    .destaqueSlogan {
+        font-size: 3.5vw;
+        margin-top: 15px;
+        line-height: 25px;
+    }
+
+    .textoOrcamento h1 {
+        font-size: 23px;
+    }
+
+    .opcoesOrcamento {
+        display: block;
+    }
+    
+    .orcamento-imagens {
+        margin: 10px 0;
+    }
+    .orcamento-imagens img {
+        margin: 5px 5px;
+        border-radius: 15px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    /* HEADER */
+    #inputBusca {
+        width: 320px;
+    }
+    
+    .topoPrincipal img {
+        height: 130px;
+    }
+
+    /* MENU */
+    .nav-bar {
+        padding: 6px 0;
+    }
+
+    /* INDEX */
+    .container-slide {
+        height: 40vh;
+        margin: 1vh 40px; 
+    }
+    
+    .container-itens{
+        height: 40vh;
+    }
+    
+    .item{
+        height: 40vh;
+    }
+    
+    .item img{
+        height: 40vh;
+    } 
+
+    .textoOrcamento h1 {
+        font-size: 4.5vw;
+    }
+
+    .linkPresentes a {
+        font-size: 4.5vw;
+    }
+
+    /* QUEM SOMOS */
+    .sobre-detalhes {
+        margin: 0;
+    }
+
+    /* PRESENTES */
+    .produto {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    .produtoInfos {
+        text-align: -webkit-center;
+        padding: 0;
+    }
+    
+    .produtoInfos h3 {
+        text-align: center;
+        margin-top: 20px;
+        padding: 0;
+    }
+    
+    .produtoDescricao {
+        text-align: center;
+    }
+
+    .tamanhoSabor {
+        text-align: center;
+    }
+
+    .preco {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    /* INDEX */
+    .container-slide{
+        height: 36vh;
+    }
+
+    .container-itens {
+        height: 36vh;
+    }
+
+    .item{
+        height: 36vh;
+    } 
+
+    .item img{
+        height: 36vh;
+    } 
+
+    /* NOSSO TIME */    
+    #nossoTime h1 {
+        font-size: 22px;
+    }
+    
+    /* CONTATO */
+    form {
+        margin: 30px 0;
+        padding: 20px;
+    }
+
+    input[type=text],
+    input[type=email] {
+        height: 25px;
+        width: 270px;
+    }
+
+    textarea {
+        height: 70px;
+        width: 270px;
+    }
+}
+/*fim responsividade*/

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentes</title>
+    <link rel="icon" type="image/x-icon" href="./imagens/icons/favChoco.png">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+</head>
+
+<body>
+    <header> <!--Logo da loja, redes sociais, barra de busca, botão entrar-->
+        <div class="topo">
+
+            <div class="redes"> <!--redes sociais-->
+                <img src="./imagens/icons/wpp.png">
+                <img src="./imagens/icons/insta.png">
+                <img src="./imagens/icons/fb.png">
+            </div>
+
+            <div class="topoPrincipal"> <!--logo e busca-->
+                <a href="index.html"><img src="./imagens/logo_chocoalicia_comFundo.png"></a><br>
+                <input type="text" placeholder="O que você procura..." id="inputBusca"><span><ion-icon name="search-outline"></ion-icon></span>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+
+            <div class="entrar"> <!--entrar-->
+                <div class="botaoEntrar">
+                    <button id="abrePopup">Entrar</button> 
+                </div>
+            </div>
+
+            <div class="popup"><!--Popup para o botão Entrar-->
+                <div class="close-btn">&times;</div>
+                <div class="popupForm">
+                    <h2>Acesse sua conta</h2>
+                    <div class="form-element">
+                        <label for="email-popup">Email</label>
+                        <input type="text" id="email-popup" placeholder="Digite seu email" required>
+                    </div>    
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password1" placeholder="Digite sua senha" required minlength="3">
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" id="lembrar-me">
+                        <label for="lembrar-me">Lembrar-me</label>
+                    </div>
+                    <div class="form-element">
+                        <button id="btn-popup">Entrar</button>
+                    </div>
+                    <div class="form-element">
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                </div>
+            </div><!--fim popup-->
+
+        </div> <!--fim topo-->
+
+    </header>
+
+    <!--Barra de navegação-->
+    <div class="nav">
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="QuemSomos.html">QUEM SOMOS</a></li>
+                <li><a href="NossoTime.html">NOSSO TIME</a></li>
+                <li><a href="Presentes.html">PRESENTES</a></li>
+                <li><a href="Contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </div> <!--nav-->
+
+
+    <div id="presentes"> <!--Div para todo o conteúdo da página-->
+        <h1>Um presente único, delicioso e encantador!</h1>
+        <p class="presentesDescricao">Chocolates são sempre opções de presente, mas a <span class="chocoalicia">ChocoAlícia</span> vai além.<br>
+            Mais que um presente, nossos produtos proporcionam uma experiência única.<br>
+            Aqui você vai encontrar o presente certo para sua celebração.
+        </p>
+
+        <div class="linhasComerciais"> <!--Bate Coração-->
+            <button id="linha01" class="btn-presentes">
+                <h2>+ Linha Bate Coração</h2>
+            </button>
+            <p  class="linhaDescricao">Corações lapidados para você demonstrar todo seu amor pela pessoa querida.<br>
+                 Apresentado em uma embalagem que vai fazer seu coração palpitar de felicidade.
+            </p>
+
+            <ul id="linha02" class="drop-linha-presentes">                
+                <li>
+                    <div class="linhaOpcoes">
+                        <div class="produto">
+                            <img src="./imagens/presentes/batecoracao1.jpg">
+                            <div class="produtoInfos">
+                                <h3> Gotas rosa </h3>
+                                <p class="produtoDescricao">Coração decorado com traços e gotas que fazem esse chocolate virar uma obra de arte.</p>
+                                <p class="tamanhoSabor">250g | Casca e recheio à sua escolha. </p>
+                                <br>
+                                <p class="preco">R$ 29,99</p>
+                                <div class="botaoQuero">
+                                    <p>Eu quero</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="produto">
+                            <img src="./imagens/presentes/batecoracao2.jpg">
+                            <div class="produtoInfos">
+                                <h3>Pérolas Encantadas</h3>
+                                <p class="produtoDescricao">A decoração em pérolas traz sofisticação e elegância para esse presente que é uma jóia.</p><!--REVISAR - RETIRADO O NAME DOS SABORES-->
+                                <p class="tamanhoSabor">250g | Casca e recheio à sua escolha. </p>
+                                <br>
+                                <p class="preco">R$ 29,99</p>
+                                <div class="botaoQuero">
+                                    <p>Eu quero</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--fim linhaOpcoes-->
+                </li>
+            </ul>
+        </div><!--fim Bate Coração-->
+
+        <div class="linhasComerciais"> <!--Você é Especial-->
+            <button id="linha03" class="btn-presentes">
+                <h2>+ Linha Você é Especial</h2>
+            </button>
+            <p class="linhaDescricao">Suas datas comemorativas terão um toque especial e singular.<br>
+                Além do sabor que já é nossa marca, personalizamos seu presente para deixar sua cara.
+            </p>
+
+            <ul id="linha04" class="drop-linha-presentes">
+                </li>
+                    <div class="linhaOpcoes">
+                        <div class="produto">
+                            <img src="./imagens/presentes/meuamor1.jpg">
+                            <div class="produtoInfos">
+                                <h3>Caneca trufada</h3>
+                                <p class="produtoDescricao">Uma caneca personalizada recheada de bombons de licor, para deixar seu café ainda melhor.</p>
+                                <p class="tamanhoSabor">200g | Casca e recheio à sua escolha. </p>
+                                <br>
+                                <p class="preco">R$ 49,99</p>
+                                <div class="botaoQuero">
+                                    <p>Eu quero</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="produto">
+                            <img src="./imagens/presentes/meuamor2.jpg">
+                            <div class="produtoInfos">
+                                <h3>Barra do Amor</h3>
+                                <p class="produtoDescricao">Um presente deslumbrante, um sabor inigualável, e uma mensagem radiante.</p>
+                                <p class="tamanhoSabor">350g | Casca e recheio à sua escolha. </p>
+                                <br>
+                                <p class="preco">R$ 39,99</p>
+                                <div class="botaoQuero">
+                                    <p>Eu quero</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--fim linhaOpcoes-->
+                </li>
+            </ul>
+        </div><!--fim Você é Especial-->
+
+        <div class="linhasComerciais"> <!--Páscoa-->
+            <button id="linha05" class="btn-presentes">
+                <h2>+ Linha Páscoa</h2>
+            </button>
+            <p class="linhaDescricao">Porque o que é bom deve ser saboreado o ano inteiro.<br>
+                Nossos ovos de colher te faz salivar do momento que você o vê até o último pedacinho de chocolate.
+            </p>
+
+            <ul id="linha06" class="drop-linha-presentes">
+                <li>
+                    <div class="linhaOpcoes">
+                        <div class="produto">
+                            <img src="./imagens/presentes/pascoa1.jpg">
+                            <div class="produtoInfos">
+                                <h3>Ovo Pleno</h3>
+                                <p class="produtoDescricao"></p>
+                                <p class="tamanhoSabor">250g | Casca, recheio e topping à sua escolha. </p>
+                                <br>
+                                <p class="preco">R$ 59,99</p>
+                                <div class="botaoQuero">
+                                    <p>Eu quero</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <div class="produtoFoto">
+                                <img src="./imagens/presentes/pascoa2.jpg">
+                            </div>
+                            <div class="produtoInfos">
+                                <h3>Ovo Master</h3>
+                                <p class="produtoDescricao"></p>
+                                <p class="tamanhoSabor">500g | Casca, recheio e topping à sua escolha. </p>
+                                <br>
+                                <p class="preco">R$ 79,99</p>
+                                <div class="botaoQuero">
+                                    <p>Eu quero</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--fim linhaOpcoes-->
+                </li>
+            </ul>
+        </div><!--fim Pascoa-->
+
+        <div class="linhasComerciais"> <!--Florescer-->
+            <button id="linha07" class="btn-presentes">
+                <h2>+ Linha Florescer</h2>
+            </button>
+            <p class="linhaDescricao">Se uma caixa de bombons já arranca suspiros...<br>
+                Imagina uma caixa repleta de trufas no formato da sua flor preferida. Sensacional, não?
+            </p>
+
+            <ul id="linha08" class="drop-linha-presentes">
+                <li>
+                    <br>
+                    <p class="linhaDescricao"><span style="color: rgb(217, 130, 54)"><b>EM BREVE</b></span></p>
+                </li>
+            </ul>
+        </div> <!--fim Florescer-->
+
+        <div class="linhasComerciais"> <!--100% nacional-->
+            <button id="linha09" class="btn-presentes">
+                <h2>+ Linha 100% Nacional</h2>
+            </button>
+            <p class="linhaDescricao">Valorizar nossos produtos nacionais também é nossa missão.<br>
+                Uma linha toda produzida com puro cacau amazônico, combinados com sabores naturais de coco e cupuaçu.
+            </p>
+
+            <ul id="linha10" class="drop-linha-presentes">
+                <li>
+                    <br>
+                    <p class="linhaDescricao"><span style="color: rgb(217, 130, 54)"><b>EM BREVE</b></span></p>
+                </li>
+            </ul>
+        </div> <!--fim 100% nacional-->
+
+    </div><!--fim Presentes-->
+
+
+    <footer>
+
+        <div class="logoRodape">
+            <a href="index.html"><img src="./imagens/logo_chocoalicia_comFundo.png"></a>
+        </div>
+
+        <div class="rodape">
+            <div class="textoRodape">
+                <div class="redesRodape">
+                    <h4>Fale conosco</h4>
+                    <div class="iconesRedes">
+                        <img src="./imagens/icons/wpp.png">
+                        <img src="./imagens/icons/insta.png">
+                        <img src="./imagens/icons/fb.png">
+                    </div>
+                </div>
+
+                <div class="funcionamento">
+                    <h4>Horário de funcionamento</h4>
+                    <p> Segunda a sábado: <span>10h às 22h</span><br>
+                        Domingo e feriado: <span>13h às 21h</span></p>
+                </div>
+                    
+                <div id="localizacao">
+                    <h4>Localização</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.9396196271614!2d-43.46877558503476!3d-22.878688785026135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdff2a1bed6f3%3A0x5ecb9488f615e5a2!2sBangu%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1666017113047!5m2!1spt-BR!2sbr" width="200" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div> <!--fim textoRodape-->
+
+            <div class="copyright">
+                <p>ChocoAlícia © Copyright 2022 - Todos os direitos reservados. CNPJ 00.000.000/0001-00.</p>
+                <p>Desenvolvido por <a href="devs.html">Impulse Company</a></p>
+            </div>
+        </div> <!--fim rodape-->
+
+    </footer>
+
+    <!-- SCRIPTS EXTERNOS -->
+    <script src="javascript/popup-login.js"></script>
+    <script src="javascript/presentes.js"></script>
+
+</body>
+</html>
