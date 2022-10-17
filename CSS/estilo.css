@@ -1165,7 +1165,8 @@ textarea:valid {
 @media (max-width: 750px) {
     /* HEADER */
     .redes,
-    .entrar {
+    .entrar,
+    .inputBusca {
         display: none;
     }
 
